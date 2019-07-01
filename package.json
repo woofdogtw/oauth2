@@ -1,0 +1,48 @@
+{
+  "name": "oauth2",
+  "version": "0.1.3",
+  "description": "OAuth2 server.",
+  "main": "oauth2.js",
+  "bin": "oauth2.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json -p -r lib models routes",
+    "start": "node oauth2.js",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -t 10000 --recursive"
+  },
+  "author": "Chien-Hong Chan",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^6.6.2",
+    "async": "^2.6.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "escape-string-regexp": "^1.0.5",
+    "express": "^4.16.4",
+    "joi": "^14.3.1",
+    "json5": "^2.1.0",
+    "lodash": "^4.17.11",
+    "log4js": "^3.0.6",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.1.10",
+    "oauth2-server": "^3.0.1",
+    "pug": "^2.0.3",
+    "randomstring": "^1.1.5",
+    "request": "^2.88.0",
+    "serve-static": "^1.13.2",
+    "sqlite3": "^4.0.4",
+    "stdio": "^0.2.7"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.5.5",
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
+  },
+  "pkg": {
+    "assets": [
+      "credentials/*",
+      "public/**/*",
+      "views/**/*"
+    ]
+  }
+}

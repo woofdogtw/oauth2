@@ -1,0 +1,25 @@
+{
+  service: {
+    httpPort: 1080,
+    httpsPort: 1443,
+    cacert: '',
+    cert: '',
+    key: ''
+  },
+  oauth2: {
+    db: {
+      mongodb: {
+        url: 'mongodb://localhost',
+        db: 'oauth2_dev'
+      },
+      sqlite3: {
+        path: 'oauth2_dev.db'
+      },
+      engine: 'sqlite3'
+    },
+    redirectUri: '/oauth2/desktop',
+    userExpiredMsec: 600000,
+    accessTokenLifetime: 3600,
+    refreshTokenLifetime: 1209600
+  }
+}

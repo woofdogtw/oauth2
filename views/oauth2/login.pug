@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .container
+    form.form-signin(method='post' action='/oauth2/login' role='form')
+      h2.form-signin-heading Please sign in
+      .form-group
+        - if (state) {
+          input(type='hidden' name='state' value=state)
+        - }
+        input.form-control(type='text' name='account' placeholder='user@example.com' required autofocus)
+        p
+        input.form-control(type='password' name='password' placeholder='password' required)
+        p
+        - if (error) {
+          .alert.alert-danger(role='alert')= error
+        - }
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
